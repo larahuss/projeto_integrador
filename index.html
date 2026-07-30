@@ -2,19 +2,18 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
 
-    <title>Ciência Acessível</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap -->
-    <link 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
-    rel="stylesheet">
+<title>Ciência Acessível</title>
 
-    <!-- Nosso CSS -->
-    <link rel="stylesheet" href="style.css">
+<link 
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -22,19 +21,19 @@
 <body>
 
 
-<header class="text-center p-4">
+<header class="cabecalho">
 
-    <h1>🔬 Ciência Acessível</h1>
+<h1>🔬 Ciência Acessível</h1>
 
-    <p>
-        Tecnologia, Física e Robótica para todos
-    </p>
+<p>
+Física • Robótica • Tecnociência
+</p>
 
 </header>
 
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
 <div class="container">
 
@@ -43,30 +42,22 @@ Projeto
 </a>
 
 
-<ul class="navbar-nav">
+<div>
 
-<li class="nav-item">
-<a class="nav-link" href="#fisica">
+<a class="nav-link d-inline text-white" href="#fisica">
 Física
 </a>
-</li>
 
-
-<li class="nav-item">
-<a class="nav-link" href="#robotica">
+<a class="nav-link d-inline text-white" href="#robotica">
 Robótica
 </a>
-</li>
 
-
-<li class="nav-item">
-<a class="nav-link" href="#acessibilidade">
+<a class="nav-link d-inline text-white" href="#acessibilidade">
 Acessibilidade
 </a>
-</li>
 
 
-</ul>
+</div>
 
 
 </div>
@@ -76,33 +67,26 @@ Acessibilidade
 
 
 
-
-<section class="text-center p-3">
-
-<h2>Recursos Assistivos</h2>
-
+<section class="barra">
 
 <button onclick="aumentarFonte()" class="btn btn-success">
 A+
 </button>
 
-
 <button onclick="diminuirFonte()" class="btn btn-warning">
 A-
 </button>
 
-
 <button onclick="altoContraste()" class="btn btn-dark">
-Alto Contraste
+Contraste
 </button>
-
 
 <button onclick="lerPagina()" class="btn btn-info">
-🔊 Ler Página
+🔊 Ler
 </button>
 
-
 </section>
+
 
 
 
@@ -111,35 +95,26 @@ Alto Contraste
 <main class="container">
 
 
+
 <section id="fisica">
 
 
-<h2 class="text-center">
-⚡ Física
-</h2>
+<h2>⚡ Física</h2>
 
 
-
-<div class="row justify-content-center">
-
+<div class="cartoes">
 
 
-<article class="col-md-4">
+<article class="cartao">
 
 
-<div class="flashcard">
-
-
-<div class="flashcard-conteudo">
-
+<div class="cartao-interno">
 
 
 <div class="frente">
 
-
-<img 
-src="imagens/disco-newton.jpg"
-alt="Disco de Newton com cores do espectro da luz">
+<img src="imagens/disco-newton.jpg"
+alt="Disco de Newton com cores do espectro">
 
 
 <h3>
@@ -147,14 +122,7 @@ Disco de Newton
 </h3>
 
 
-<p>
-Clique ou passe o mouse para descobrir.
-</p>
-
-
 </div>
-
-
 
 
 
@@ -167,13 +135,9 @@ Como funciona?
 
 
 <p>
-Quando gira rapidamente, o disco mistura as cores
-e cria a sensação visual da cor branca.
+Quando gira rapidamente,
+as cores parecem formar branco.
 </p>
-
-
-</div>
-
 
 
 </div>
@@ -185,7 +149,6 @@ e cria a sensação visual da cor branca.
 </article>
 
 
-
 </div>
 
 
@@ -195,48 +158,76 @@ e cria a sensação visual da cor branca.
 
 
 
+
+
 <section id="robotica">
 
 
-<h2 class="text-center">
-🤖 Robótica
-</h2>
+<h2>🤖 Robótica</h2>
+
+
+<div class="cartoes">
 
 
 
-<div class="row">
+<article class="cartao">
+
+<div class="cartao-interno">
+
+
+<div class="frente">
+
+<img src="imagens/led-fade-in.jpg"
+alt="LED aumentando o brilho">
+
+
+<h3>
+LED Fade In
+</h3>
+
+
+</div>
+
+
+<div class="verso">
+
+<h3>
+Funcionamento
+</h3>
+
+<p>
+O brilho aumenta gradualmente através da programação.
+</p>
+
+</div>
+
+
+</div>
+
+</article>
 
 
 
-<article class="col-md-4">
 
 
-<div class="flashcard">
+<article class="cartao">
 
-
-<div class="flashcard-conteudo">
+<div class="cartao-interno">
 
 
 <div class="frente">
 
 
-<img 
-src="imagens/led-rgb.jpg"
-alt="Placa eletrônica com LED RGB">
+<img src="imagens/led-fade-out.jpg"
+alt="LED diminuindo o brilho">
 
 
 <h3>
-LED RGB
+LED Fade Out
 </h3>
 
 
-<p>
-Mistura de cores usando tecnologia.
-</p>
-
-
 </div>
-
 
 
 <div class="verso">
@@ -248,19 +239,14 @@ Funcionamento
 
 
 <p>
-LEDs vermelho, verde e azul podem criar diversas cores.
+A intensidade da luz diminui aos poucos.
 </p>
 
 
 </div>
 
 
-
 </div>
-
-
-</div>
-
 
 </article>
 
@@ -268,31 +254,23 @@ LEDs vermelho, verde e azul podem criar diversas cores.
 
 
 
-<article class="col-md-4">
+
+<article class="cartao">
 
 
-<div class="flashcard">
-
-
-<div class="flashcard-conteudo">
+<div class="cartao-interno">
 
 
 <div class="frente">
 
 
-<img 
-src="imagens/robo.jpg"
-alt="Pequeno robô utilizado em atividades educativas">
+<img src="imagens/led-rgb.jpg"
+alt="LED RGB com várias cores">
 
 
 <h3>
-Robótica Educacional
+LED RGB
 </h3>
-
-
-<p>
-Tecnologia aplicada ao aprendizado.
-</p>
 
 
 </div>
@@ -303,18 +281,13 @@ Tecnologia aplicada ao aprendizado.
 
 
 <h3>
-Importância
+Cores
 </h3>
 
 
 <p>
-A robótica desenvolve criatividade,
-lógica e resolução de problemas.
+Vermelho, verde e azul criam várias combinações.
 </p>
-
-
-</div>
-
 
 
 </div>
@@ -336,44 +309,25 @@ lógica e resolução de problemas.
 
 
 
+
+
 <section id="acessibilidade">
 
 
-<h2 class="text-center">
-♿ Acessibilidade
-</h2>
-
+<h2>♿ Acessibilidade</h2>
 
 
 <article>
 
-
-<p>
-Recursos que ajudam pessoas com baixa visão ou cegueira:
-</p>
-
-
 <ul>
 
-<li>
-Leitor de tela
-</li>
+<li>Leitor de tela</li>
 
+<li>Aumento de fonte</li>
 
-<li>
-Aumento de fonte
-</li>
+<li>Alto contraste</li>
 
-
-<li>
-Alto contraste
-</li>
-
-
-<li>
-Descrições alternativas em imagens
-</li>
-
+<li>Texto alternativo nas imagens</li>
 
 </ul>
 
@@ -391,27 +345,18 @@ Descrições alternativas em imagens
 
 
 
-<footer class="text-center p-3 bg-primary text-white">
-
+<footer>
 
 <p>
-Projeto Integrador - Ciência Acessível
+Projeto Integrador 2026
 </p>
-
 
 </footer>
 
 
 
 
-
 <script src="script.js"></script>
-
-
-<script 
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-</script>
-
 
 
 </body>
