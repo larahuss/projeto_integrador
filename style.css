@@ -1,63 +1,245 @@
-/* ========================= */
-/* Cartão com efeito de giro */
-/* ========================= */
+/* ==========================
+   ESTILO GERAL
+========================== */
 
-.cartao {
-    width: 100%;
-    height: 430px;
-    perspective: 1000px;
-    cursor: pointer;
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#dff6ff,#ffffff,#cfe8ff);
+    color:#333;
 }
 
-.cartao-interno {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
+/* ==========================
+   CABEÇALHO
+========================== */
+
+header{
+    background:linear-gradient(90deg,#0d6efd,#4dabf7);
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
 }
 
-/* Gira ao passar o mouse */
-.cartao:hover .cartao-interno {
-    transform: rotateY(180deg);
+header h1{
+    font-size:3rem;
+    font-weight:bold;
+}
+
+header p{
+    font-size:1.2rem;
+}
+
+/* ==========================
+   MENU
+========================== */
+
+.navbar{
+    box-shadow:0 2px 8px rgba(0,0,0,.2);
+}
+
+.nav-link{
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:#ffd43b !important;
+}
+
+/* ==========================
+   BOTÕES
+========================== */
+
+.barra-acessibilidade{
+    background:white;
+    border-bottom:2px solid #ddd;
+}
+
+.barra-acessibilidade .btn{
+    margin:5px;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.barra-acessibilidade .btn:hover{
+    transform:scale(1.08);
+}
+
+/* ==========================
+   TÍTULOS
+========================== */
+
+h2{
+    text-align:center;
+    color:#0d6efd;
+    margin-bottom:30px;
+    font-weight:bold;
+}
+
+/* ==========================
+   CARTÃO 3D
+========================== */
+
+.cartao{
+    width:100%;
+    height:430px;
+    perspective:1200px;
+    margin:20px auto;
+    cursor:pointer;
+}
+
+.cartao-interno{
+    width:100%;
+    height:100%;
+    position:relative;
+    transition:transform .9s;
+    transform-style:preserve-3d;
+}
+
+.cartao:hover .cartao-interno,
+.cartao.virado .cartao-interno{
+    transform:rotateY(180deg);
 }
 
 .cartao-frente,
-.cartao-verso {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    overflow: hidden;
-    backface-visibility: hidden;
-    background: white;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+.cartao-verso{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:20px;
+    overflow:hidden;
+    background:white;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+    backface-visibility:hidden;
 }
 
-/* Verso do cartão */
-.cartao-verso {
-    transform: rotateY(180deg);
+.cartao-verso{
+    transform:rotateY(180deg);
 }
 
-/* Imagens */
-.cartao img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
+/* ==========================
+   IMAGENS
+========================== */
+
+.cartao img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
 }
 
-/* Texto */
-.cartao .card-body {
-    padding: 20px;
-    text-align: center;
+/* ==========================
+   TEXTO DOS CARTÕES
+========================== */
+
+.card-body{
+    padding:20px;
+    text-align:center;
 }
 
-.cartao h4 {
-    margin-bottom: 15px;
-    color: #0d6efd;
+.card-body h4{
+    color:#0d6efd;
+    font-weight:bold;
 }
 
-.cartao p {
-    font-size: 16px;
-    color: #333;
+.card-body p{
+    font-size:17px;
+    line-height:1.5;
+}
+
+/* ==========================
+   CARDS NORMAIS
+========================== */
+
+.card{
+    border:none;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,.25);
+}
+
+/* ==========================
+   LISTA
+========================== */
+
+ul{
+    list-style:none;
+    padding:0;
+}
+
+ul li{
+    background:white;
+    margin:12px 0;
+    padding:15px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+/* ==========================
+   IMAGEM ACESSIBILIDADE
+========================== */
+
+.img-fluid{
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+/* ==========================
+   RODAPÉ
+========================== */
+
+footer{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+    font-size:18px;
+}
+
+/* ==========================
+   ANIMAÇÕES
+========================== */
+
+section{
+    animation:aparecer 1s;
+}
+
+@keyframes aparecer{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ==========================
+   CELULAR
+========================== */
+
+@media(max-width:768px){
+
+header h1{
+    font-size:2rem;
+}
+
+.cartao{
+    height:420px;
+}
+
+.card-body p{
+    font-size:15px;
+}
+
 }
