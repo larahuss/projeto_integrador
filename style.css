@@ -1,291 +1,63 @@
-/* Configuração geral */
+/* ========================= */
+/* Cartão com efeito de giro */
+/* ========================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+.cartao {
+    width: 100%;
+    height: 430px;
+    perspective: 1000px;
+    cursor: pointer;
 }
 
-
-body{
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size:20px;
-
-    background:#fffbff;
-
-    color:#000000fe;
-
-    line-height:1.6;
-
-    transition:0.3s;
-
+.cartao-interno {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
 
-
-/* Cabeçalho */
-
-header{
-
-    box-shadow:0 4px 10px rgba(0,0,0,0.2);
-
+/* Gira ao passar o mouse */
+.cartao:hover .cartao-interno {
+    transform: rotateY(180deg);
 }
 
-
-header h1{
-
-    font-size:45px;
-
-    font-weight:bold;
-
+.cartao-frente,
+.cartao-verso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-
-/* Menu */
-
-.navbar{
-
-    box-shadow:0 3px 8px rgba(0,0,0,0.3);
-
+/* Verso do cartão */
+.cartao-verso {
+    transform: rotateY(180deg);
 }
-
-
-.nav-link{
-
-    font-size:18px;
-
-}
-
-
-/* Barra de acessibilidade */
-
-.barra-acessibilidade{
-
-    background:#edacef;
-
-    border-bottom:2px solid #da74d8;
-
-}
-
-
-.barra-acessibilidade button{
-
-    font-size:20px;
-
-    padding:12px 20px;
-
-    margin:5px;
-
-    border-radius:10px;
-
-}
-
-
-/* Títulos */
-
-h2{
-
-    color:#b21dbd;
-
-    font-weight:bold;
-
-    margin-bottom:25px;
-
-}
-
-
-/* Cards */
-
-.card{
-
-    height:100%;
-
-    border:none;
-
-    border-radius:15px;
-
-    overflow:hidden;
-
-    box-shadow:0 5px 15px rgba(0,0,0,0.15);
-
-    transition:0.3s;
-
-}
-
-
-.card:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 10px 25px rgba(0,0,0,0.25);
-
-}
-
-
-.card-body{
-
-    padding:25px;
-
-}
-
-
-.card h3,
-.card h4{
-
-    color:#4e0a4b;
-
-}
-
 
 /* Imagens */
-
-.card img{
-
-    height:230px;
-
-    object-fit:cover;
-
+.cartao img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
 }
 
-
-/* Lista */
-
-ul{
-
-    background:rgb(143, 29, 177);
-
-    padding:25px;
-
-    border-radius:15px;
-
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-
+/* Texto */
+.cartao .card-body {
+    padding: 20px;
+    text-align: center;
 }
 
-
-li{
-
-    margin:10px;
-
+.cartao h4 {
+    margin-bottom: 15px;
+    color: #0d6efd;
 }
 
-
-/* Imagens gerais */
-
-img{
-
-    max-width:100%;
-
-}
-
-
-/* Rodapé */
-
-footer{
-
-    margin-top:50px;
-
-    box-shadow:0 -3px 10px rgba(0,0,0,0.2);
-
-}
-
-
-/* =========================
-   MODO ALTO CONTRASTE
-========================= */
-
-
-.contraste{
-
-    background:#000;
-
-    color:#fff;
-
-}
-
-
-.contraste header{
-
-    background:#000 !important;
-
-}
-
-
-.contraste .navbar{
-
-    background:#000 !important;
-
-}
-
-
-.contraste .card{
-
-    background:#111;
-
-    color:#fff;
-
-    border:2px solid yellow;
-
-}
-
-
-.contraste h2,
-.contraste h3,
-.contraste h4{
-
-    color:#ffff00;
-
-}
-
-
-.contraste ul{
-
-    background:#111;
-
-    color:white;
-
-}
-
-
-.contraste footer{
-
-    background:#000 !important;
-
-}
-
-
-/* Botões maiores para acessibilidade */
-
-button{
-
-    cursor:pointer;
-
-}
-
-
-/* Responsividade */
-
-@media(max-width:768px){
-
-    body{
-
-        font-size:18px;
-
-    }
-
-
-    header h1{
-
-        font-size:32px;
-
-    }
-
-
-    .card img{
-
-        height:200px;
-
-    }
-
+.cartao p {
+    font-size: 16px;
+    color: #333;
 }
