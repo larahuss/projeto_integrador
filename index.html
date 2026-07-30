@@ -1,60 +1,358 @@
-<section id="fisica">
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-    <h2>Disco de Newton</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div class="row justify-content-center">
+    <title>Ciência Acessível</title>
 
-        <div class="col-md-6">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-            <div class="cartao">
+<body>
 
-                <div class="cartao-interno">
+<header class="topo">
 
-                    <!-- Frente -->
-                    <div class="cartao-frente">
+    <h1>🔬 Ciência Acessível</h1>
 
-                        <img src="imagens/disco-newton.jpg"
-                             class="card-img-top"
-                             alt="Disco de Newton mostrando as cores do espectro">
+    <p>
+        Física • Robótica • Tecnociência
+    </p>
 
-                        <div class="card-body">
+</header>
 
-                            <h4>Disco de Newton</h4>
 
-                            <p>
-                                Passe o mouse ou toque no cartão para descobrir mais.
-                            </p>
+<nav class="menu">
 
-                        </div>
+    <a href="#inicio">Início</a>
+    <a href="#fisica">Física</a>
+    <a href="#robotica">Robótica</a>
+    <a href="#acessibilidade">Acessibilidade</a>
 
-                    </div>
+</nav>
 
-                    <!-- Verso -->
-                    <div class="cartao-verso">
 
-                        <img src="imagens/disco-newton2.jpg"
-                             class="card-img-top"
-                             alt="Disco de Newton girando">
 
-                        <div class="card-body">
+<section class="acessibilidade">
 
-                            <h4>Como funciona?</h4>
+    <button onclick="aumentarFonte()">A+</button>
 
-                            <p>
-                                Quando o disco gira rapidamente, nosso cérebro mistura todas as
-                                cores do espectro e enxerga a cor branca.
-                            </p>
+    <button onclick="diminuirFonte()">A-</button>
 
-                        </div>
+    <button onclick="altoContraste()">
+        Alto Contraste
+    </button>
 
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+    <button onclick="lerPagina()">
+        🔊 Ler Página
+    </button>
 
 </section>
+
+
+
+<main>
+
+
+<section id="inicio" class="inicio">
+
+<h2>Bem-vindo ao Ciência Acessível</h2>
+
+<p>
+Este projeto mostra como a Física e a Robótica podem ser usadas
+para criar experiências acessíveis para todos.
+</p>
+
+
+</section>
+
+
+
+
+<section id="fisica">
+
+
+<h2>⚡ Física</h2>
+
+
+<div class="area-cartoes">
+
+
+
+<article class="cartao">
+
+
+<div class="cartao-interno">
+
+
+<div class="frente">
+
+
+<img src="imagens/disco-newton.jpg"
+alt="Disco de Newton com várias cores">
+
+
+<h3>Disco de Newton</h3>
+
+
+<p>
+Passe o mouse ou clique para descobrir.
+</p>
+
+
+</div>
+
+
+
+<div class="verso">
+
+
+<img src="imagens/disco-newton2.jpg"
+alt="Experimento do Disco de Newton">
+
+
+<h3>Como funciona?</h3>
+
+
+<p>
+A rotação mistura as cores do espectro,
+fazendo nosso cérebro perceber a cor branca.
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</article>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section id="robotica">
+
+
+<h2>🤖 Robótica</h2>
+
+
+
+<div class="area-cartoes">
+
+
+
+<article class="cartao">
+
+
+<div class="cartao-interno">
+
+
+<div class="frente">
+
+
+<h3>LED Fade In</h3>
+
+
+<p>
+O LED aumenta seu brilho gradualmente.
+</p>
+
+
+</div>
+
+
+<div class="verso">
+
+
+<h3>Funcionamento</h3>
+
+
+<p>
+O controle da intensidade acontece através
+da programação do circuito.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</article>
+
+
+
+
+
+<article class="cartao">
+
+
+<div class="cartao-interno">
+
+
+<div class="frente">
+
+
+<h3>LED Fade Out</h3>
+
+
+<p>
+O LED diminui o brilho aos poucos.
+</p>
+
+
+</div>
+
+
+<div class="verso">
+
+
+<h3>Aplicação</h3>
+
+
+<p>
+Esse efeito é usado em sistemas de iluminação
+inteligentes.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</article>
+
+
+
+
+
+<article class="cartao">
+
+
+<div class="cartao-interno">
+
+
+<div class="frente">
+
+
+<h3>LED RGB</h3>
+
+
+<p>
+Mistura das cores vermelho, verde e azul.
+</p>
+
+
+</div>
+
+
+<div class="verso">
+
+
+<h3>Cores digitais</h3>
+
+
+<p>
+A combinação RGB permite criar várias cores.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</article>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section id="acessibilidade">
+
+
+<h2>♿ Acessibilidade</h2>
+
+
+<div class="info">
+
+
+<div>
+
+
+<ul>
+
+<li>🔊 Leitor de tela</li>
+
+<li>🔍 Aumento de fonte</li>
+
+<li>🌙 Alto contraste</li>
+
+<li>📝 HTML semântico</li>
+
+<li>🖼️ Imagens com descrição ALT</li>
+
+</ul>
+
+
+</div>
+
+
+
+<img src="imagens/acessibilidade.jpg"
+alt="Pessoa utilizando recursos de acessibilidade">
+
+
+</div>
+
+
+</section>
+
+
+
+</main>
+
+
+
+
+<footer>
+
+
+<p>
+Projeto Integrador 2026 • Ciência Acessível
+</p>
+
+
+</footer>
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
