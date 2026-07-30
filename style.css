@@ -1,77 +1,91 @@
 /* ==========================
-   NOVAS CORES DO SITE
+   FLASHCARDS QUE GIRAM
 ========================== */
-
-body {
-    background: #f7f3ff;
-    color: #222;
-}
-
-
-/* Cabeçalho */
-
-header {
-
-    background: linear-gradient(
-        135deg,
-        #111111,
-        #5b2c83,
-        #8e44ad
-    );
-
-    color:white;
-
-}
-
-
-
-/* Títulos */
-
-h2 {
-
-    color:#6a1b9a;
-
-}
-
-
-
-/* ==========================
-   ORGANIZAÇÃO DOS CARTÕES
-========================== */
-
 
 .row {
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:25px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
 }
 
 
-
-/* Cada cartão */
+/* cartão pequeno tipo foto */
 
 .flashcard {
 
-    width:230px;
+    width: 230px;
+    height: 280px;
 
-    height:280px;
+    perspective: 900px;
 
-    margin:20px;
+    margin: 20px;
+
+}
+
+
+
+/* parte que gira */
+
+.flashcard-conteudo {
+
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    transition: transform 0.7s ease;
+
+    transform-style: preserve-3d;
+
+}
+
+
+
+/* gira somente o cartão */
+
+.flashcard:hover .flashcard-conteudo {
+
+    transform: rotateY(180deg);
 
 }
 
 
 
 
-/* Frente */
+/* frente e verso */
 
-.frente {
+.frente,
+.verso {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 15px;
+
+    border-radius: 18px;
 
     background:white;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+
+    backface-visibility:hidden;
+
+    text-align:center;
+
+    overflow:hidden;
+
+}
+
+
+
+
+/* frente */
+
+.frente {
 
     border:3px solid #9b59b6;
 
@@ -79,118 +93,38 @@ h2 {
 
 
 
-/* Verso */
+/* imagem */
+
+.frente img {
+
+    width:100%;
+
+    height:130px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+}
+
+
+
+/* verso */
 
 .verso {
+
+    transform:rotateY(180deg);
 
     background:#eadcff;
 
     border:3px solid #6a1b9a;
 
-}
+    display:flex;
 
+    justify-content:center;
 
+    align-items:center;
 
-/* Títulos dos cartões */
-
-.flashcard h3 {
-
-    color:#7b1fa2;
-
-}
-
-
-
-/* ==========================
-   SEÇÕES
-========================== */
-
-
-section {
-
-    padding:40px 0;
-
-}
-
-
-
-/* Fundo alternado */
-
-#robotica {
-
-    background:#ffffff;
-
-    border-radius:30px;
-
-}
-
-
-#fisica {
-
-    background:#f1e7ff;
-
-    border-radius:30px;
-
-}
-
-
-
-#acessibilidade {
-
-    background:#ffffff;
-
-    border-radius:30px;
-
-}
-
-
-
-/* ==========================
-   MENU
-========================== */
-
-
-.navbar {
-
-    background:#111 !important;
-
-}
-
-
-.nav-link:hover {
-
-    color:#c77dff !important;
-
-}
-
-
-
-/* ==========================
-   RODAPÉ
-========================== */
-
-
-footer {
-
-    background:#111 !important;
-
-}
-
-
-
-/* ==========================
-   MOBILE
-========================== */
-
-
-@media(max-width:768px){
-
-    .row{
-
-        flex-direction:column;
-
-        align-items:center;
-
-    }
+    flex-direction:column;
 
 }
