@@ -1,22 +1,33 @@
-/* FUNDO DO SITE */
+/* =========================
+   CONFIGURAÇÃO GERAL
+========================= */
 
-body {
-    background: #f8f4ff;
-    color: #222;
-    font-family: Arial, Helvetica, sans-serif;
+* {
+    box-sizing: border-box;
 }
 
 
-/* CABEÇALHO */
+body {
+
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f8f5ff;
+
+    color: #222;
+
+}
+
+
+
+/* =========================
+   CABEÇALHO
+========================= */
 
 .cabecalho {
 
-    background: linear-gradient(
-        135deg,
-        #111111,
-        #5b2c83,
-        #9b59b6
-    );
+    background: linear-gradient(135deg, #111, #6a0dad, #b76cff);
 
     color:white;
 
@@ -28,7 +39,20 @@ body {
 
 
 
-/* MENU */
+.cabecalho h1 {
+
+    margin:0;
+
+    font-size:40px;
+
+}
+
+
+
+
+/* =========================
+   MENU
+========================= */
 
 .navbar {
 
@@ -37,23 +61,26 @@ body {
 }
 
 
-.navbar-brand,
-.nav-link {
-
-    color:white !important;
-
-}
-
-
 .nav-link:hover {
 
-    color:#d8a7ff !important;
+    color:#c77dff !important;
 
 }
 
 
 
-/* BOTÕES */
+/* =========================
+   BOTÕES
+========================= */
+
+.barra {
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
 
 .barra button {
 
@@ -65,7 +92,9 @@ body {
 
 
 
-/* TÍTULOS */
+/* =========================
+   TITULOS
+========================= */
 
 h2 {
 
@@ -73,32 +102,154 @@ h2 {
 
     color:#7b2cbf;
 
+    margin:40px 0;
+
 }
 
 
 
-/* CARTÕES */
 
-.frente {
+/* =========================
+   ORGANIZAÇÃO DOS CARTÕES
+========================= */
+
+.cartoes {
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+
+/* =========================
+   CARTÃO PEQUENO
+========================= */
+
+
+.cartao {
+
+    width:230px;
+
+    height:280px;
+
+    perspective:900px;
+
+}
+
+
+
+
+/* PARTE QUE GIRA */
+
+.cartao-interno {
+
+    width:100%;
+
+    height:100%;
+
+    position:relative;
+
+    transition:transform .7s ease;
+
+    transform-style:preserve-3d;
+
+}
+
+
+
+/* GIRAR SOMENTE O CARTÃO */
+
+.cartao:hover .cartao-interno {
+
+    transform:rotateY(180deg);
+
+}
+
+
+
+
+
+/* FRENTE E VERSO */
+
+.frente,
+.verso {
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    padding:15px;
+
+    border-radius:20px;
 
     background:white;
 
     border:3px solid #9d4edd;
 
+    box-shadow:0 8px 20px rgba(106,13,173,.25);
+
+    text-align:center;
+
+    backface-visibility:hidden;
+
+    overflow:hidden;
+
 }
 
+
+
+
+/* IMAGENS */
+
+.frente img {
+
+    width:100%;
+
+    height:130px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+}
+
+
+
+
+/* VERSO */
 
 .verso {
 
-    background:#e9d8ff;
+    transform:rotateY(180deg);
 
-    border:3px solid #7b2cbf;
+    background:#eadcff;
+
+    border-color:#7b2cbf;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
 
 }
 
 
 
-/* TÍTULO DOS CARTÕES */
+
+
+/* TEXTO DOS CARTÕES */
 
 .cartao h3 {
 
@@ -107,25 +258,29 @@ h2 {
 }
 
 
+.cartao p {
 
-/* SOMBRA */
-
-.frente,
-.verso {
-
-    box-shadow:
-    0 8px 20px rgba(91,44,131,0.25);
+    font-size:15px;
 
 }
 
 
 
-/* RODAPÉ */
+
+/* =========================
+   RODAPÉ
+========================= */
 
 footer {
 
-    background:#111 !important;
+    background:#111;
 
     color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+    margin-top:40px;
 
 }
