@@ -284,3 +284,47 @@ footer {
     margin-top:40px;
 
 }
+/* =========================
+   ALTO CONTRASTE
+========================= */
+
+
+.contraste {
+
+    background:black;
+
+    color:white;
+
+}
+
+
+
+.contraste .frente,
+.contraste .verso {
+
+    background:#222;
+
+    color:white;
+
+    border-color:#ffffff;
+
+}
+
+
+
+.contraste h1,
+.contraste h2,
+.contraste h3 {
+
+    color:#ffffff;
+
+}
+
+
+
+.contraste footer,
+.contraste .navbar {
+
+    background:black !important;
+
+}
