@@ -1,0 +1,131 @@
+/* FUNDO DO SITE */
+
+body {
+    background: #f8f4ff;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* CABEÇALHO */
+
+.cabecalho {
+
+    background: linear-gradient(
+        135deg,
+        #111111,
+        #5b2c83,
+        #9b59b6
+    );
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+
+
+/* MENU */
+
+.navbar {
+
+    background:#111 !important;
+
+}
+
+
+.navbar-brand,
+.nav-link {
+
+    color:white !important;
+
+}
+
+
+.nav-link:hover {
+
+    color:#d8a7ff !important;
+
+}
+
+
+
+/* BOTÕES */
+
+.barra button {
+
+    margin:5px;
+
+    border-radius:20px;
+
+}
+
+
+
+/* TÍTULOS */
+
+h2 {
+
+    text-align:center;
+
+    color:#7b2cbf;
+
+}
+
+
+
+/* CARTÕES */
+
+.frente {
+
+    background:white;
+
+    border:3px solid #9d4edd;
+
+}
+
+
+.verso {
+
+    background:#e9d8ff;
+
+    border:3px solid #7b2cbf;
+
+}
+
+
+
+/* TÍTULO DOS CARTÕES */
+
+.cartao h3 {
+
+    color:#6a0dad;
+
+}
+
+
+
+/* SOMBRA */
+
+.frente,
+.verso {
+
+    box-shadow:
+    0 8px 20px rgba(91,44,131,0.25);
+
+}
+
+
+
+/* RODAPÉ */
+
+footer {
+
+    background:#111 !important;
+
+    color:white;
+
+}
