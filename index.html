@@ -1,272 +1,60 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ciência Acessível</title>
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header class="bg-primary text-white text-center py-4">
-    <h1>Ciência Acessível</h1>
-    <p>Projeto Integrador • Física • Robótica • Tecnociência</p>
-</header>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="#">Projeto</a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="menu">
-
-            <ul class="navbar-nav ms-auto">
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#inicio">Início</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#fisica">Física</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#robotica">Robótica</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#acessibilidade">Acessibilidade</a>
-                </li>
-
-            </ul>
-
-        </div>
-    </div>
-</nav>
-
-<section class="barra-acessibilidade text-center p-3">
-
-    <button onclick="aumentarFonte()" class="btn btn-success">
-        A+
-    </button>
-
-    <button onclick="diminuirFonte()" class="btn btn-warning">
-        A-
-    </button>
-
-    <button onclick="altoContraste()" class="btn btn-dark">
-        Alto Contraste
-    </button>
-
-    <button onclick="lerPagina()" class="btn btn-info">
-        🔊 Ler Página
-    </button>
-
-</section>
-
-<main class="container my-5">
-
-<section id="inicio">
-
-<h2>Bem-vindo</h2>
-
-<p>
-
-Este projeto demonstra como a tecnologia pode tornar o ensino de Física e
-Robótica mais acessível para pessoas com baixa visão ou cegueira.
-
-</p>
-
-</section>
-
-<hr>
-
 <section id="fisica">
 
-<h2>Disco de Newton</h2>
+    <h2>Disco de Newton</h2>
 
-<div class="row">
+    <div class="row justify-content-center">
 
-<div class="col-md-6">
+        <div class="col-md-6">
 
-<div class="card">
+            <div class="cartao">
 
-<img src="imagens/disco-newton.jpg"
-class="card-img-top"
-alt="Disco de Newton mostrando as cores do espectro">
+                <div class="cartao-interno">
 
-<div class="card-body">
+                    <!-- Frente -->
+                    <div class="cartao-frente">
 
-<h4>O que é?</h4>
+                        <img src="imagens/disco-newton.jpg"
+                             class="card-img-top"
+                             alt="Disco de Newton mostrando as cores do espectro">
 
-<p>
+                        <div class="card-body">
 
-Quando o disco gira rapidamente, as cores parecem formar a cor branca.
+                            <h4>Disco de Newton</h4>
 
-</p>
+                            <p>
+                                Passe o mouse ou toque no cartão para descobrir mais.
+                            </p>
 
-</div>
+                        </div>
 
-</div>
+                    </div>
 
-</div>
+                    <!-- Verso -->
+                    <div class="cartao-verso">
 
-<div class="col-md-6">
+                        <img src="imagens/disco-newton2.jpg"
+                             class="card-img-top"
+                             alt="Disco de Newton girando">
 
-<div class="card">
+                        <div class="card-body">
 
-<div class="card-body">
+                            <h4>Como funciona?</h4>
 
-<h4>Curiosidade</h4>
+                            <p>
+                                Quando o disco gira rapidamente, nosso cérebro mistura todas as
+                                cores do espectro e enxerga a cor branca.
+                            </p>
 
-<p>
+                        </div>
 
-O experimento mostra que a luz branca é composta por várias cores.
+                    </div>
 
-</p>
+                </div>
 
-</div>
+            </div>
 
-</div>
+        </div>
 
-</div>
-
-</div>
-
-</section>
-
-<hr>
-
-<section id="robotica">
-
-<h2>Robótica</h2>
-
-<div class="row">
-
-<div class="col-md-4">
-
-<div class="card">
-
-<div class="card-body">
-
-<h3>LED Fade In</h3>
-
-<p>
-
-O LED aumenta o brilho gradualmente.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-md-4">
-
-<div class="card">
-
-<div class="card-body">
-
-<h3>LED Fade Out</h3>
-
-<p>
-
-O LED diminui o brilho gradualmente.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-md-4">
-
-<div class="card">
-
-<div class="card-body">
-
-<h3>LED RGB</h3>
-
-<p>
-
-Mistura das cores Vermelho, Verde e Azul.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
-
-<hr>
-
-<section id="acessibilidade">
-
-<h2>Acessibilidade</h2>
-
-<div class="row">
-
-<div class="col-md-6">
-
-<ul>
-
-<li>Leitor de tela</li>
-
-<li>Alto contraste</li>
-
-<li>Aumentar fonte</li>
-
-<li>Diminuir fonte</li>
-
-<li>HTML Semântico</li>
-
-<li>Imagens com ALT</li>
-
-</ul>
-
-</div>
-
-<div class="col-md-6">
-
-<img
-src="imagens/acessibilidade.jpg"
-class="img-fluid rounded"
-alt="Pessoa utilizando recursos de acessibilidade">
-
-</div>
-
-</div>
-
-</section>
-
-</main>
-
-<footer class="bg-primary text-white text-center p-3">
-
-<p>Projeto Integrador 2026</p>
-
-</footer>
-
-<script src="script.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-</html>
