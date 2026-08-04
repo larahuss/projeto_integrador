@@ -1,57 +1,213 @@
-/* Configurações Globais de Tipografia e Acessibilidade */
+/* Variáveis Principais de Cores Vivas */
 :root {
   --fonte-tamanho-base: 1rem;
+  --cor-fundo: #f0fdf4;
+  --cor-card: #ffffff;
+  --cor-texto: #0f172a;
+  --cor-destaque: #6366f1;
+}
+
+html {
+  font-size: var(--fonte-tamanho-base);
 }
 
 body {
-  font-size: var(--fonte-tamanho-base);
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
   line-height: 1.6;
-  font-family: Arial, Helvetica, sans-serif; /* Tipografia limpa sem serifa */
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Bordas claras e destacadas para baixa visão */
-.card-customizado {
-  border: 2px solid #212529 !important;
-  border-radius: 8px;
+/* Atalho Acessível */
+.skip-link {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 1000;
+}
+.skip-link:focus {
+  top: 0;
 }
 
-/* Foco Visível para Navegação por Teclado (Tab) */
-a:focus, button:focus {
-  outline: 4px solid #ffc107 !important;
+/* Foco em Teclas */
+button:focus, a:focus {
+  outline: 4px solid #f59e0b !important;
   outline-offset: 2px;
 }
 
-/* Modificador: Alto Contraste */
+/* Header com Cores Vivas */
+.header-custom {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: #ffffff;
+}
+.header-title {
+  color: #ffffff;
+}
+
+/* Estilo dos Botões de Acessibilidade */
+.btn-fonte {
+  background-color: #ffffff;
+  color: #4f46e5;
+  font-weight: bold;
+  border: none;
+}
+.btn-fonte:hover {
+  background-color: #e0e7ff;
+}
+
+.btn-contraste {
+  background-color: #fbbf24;
+  color: #000000;
+  font-weight: bold;
+  border: none;
+}
+.btn-contraste:hover {
+  background-color: #f59e0b;
+  color: #ffffff;
+}
+
+.btn-voz {
+  background-color: #10b981;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+}
+.btn-voz:hover {
+  background-color: #059669;
+}
+
+.btn-voz-parar {
+  background-color: #ef4444;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+}
+.btn-voz-parar:hover {
+  background-color: #dc2626;
+}
+
+/* Hero Banner Gradiente Vibrante */
+.hero-banner {
+  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+}
+
+/* Estilização das Abas (Navegação) */
+.nav-pills .nav-link {
+  font-weight: bold;
+  color: #334155;
+  background-color: #e2e8f0;
+  border: 2px solid #cbd5e1;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-pills .nav-link:hover {
+  background-color: #cbd5e1;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #4f46e5 !important;
+  color: #ffffff !important;
+  border-color: #4f46e5 !important;
+}
+
+/* Caixa de Conteúdo */
+.conteudo-box {
+  background-color: var(--cor-card);
+  border: 2px solid #cbd5e1;
+}
+
+.titulo-secao {
+  color: #4f46e5;
+  border-bottom: 3px solid #06b6d4;
+  padding-bottom: 8px;
+}
+
+.subtitulo {
+  color: #7c3aed;
+}
+
+.destaque-card {
+  background-color: #f8fafc;
+  border-left: 5px solid #06b6d4;
+}
+
+/* Tabela Estilizada */
+.table-header-custom {
+  background-color: #4f46e5;
+  color: #ffffff;
+}
+
+/* Cards da Aba Proposta */
+.card-proposta {
+  border: 2px solid #10b981;
+  background-color: #ecfdf5;
+}
+
+.card-ia {
+  border: 2px solid #3b82f6;
+  background-color: #eff6ff;
+}
+
+/* Rodapé */
+.footer-custom {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+/* =====================================
+   ESTILO ALTO CONTRASTE (PRETO E AMARELO)
+   ===================================== */
 body.alto-contraste {
   background-color: #000000 !important;
   color: #ffffff !important;
 }
 
-body.alto-contraste header,
-body.alto-contraste footer {
-  background-color: #121212 !important;
-  border-color: #ffffff !important;
+body.alto-contraste .header-custom,
+body.alto-contraste .footer-custom,
+body.alto-contraste .conteudo-box,
+body.alto-contraste .hero-banner {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: 3px solid #ffff00 !important;
 }
 
-body.alto-contraste .card {
+body.alto-contraste .nav-pills .nav-link {
   background-color: #000000 !important;
   color: #ffffff !important;
-  border: 3px solid #ffff00 !important; /* Borda amarela em alto contraste */
+  border: 2px solid #ffffff !important;
 }
 
-body.alto-contraste .btn-primary {
+body.alto-contraste .nav-pills .nav-link.active {
   background-color: #ffff00 !important;
   color: #000000 !important;
+  border: 2px solid #ffff00 !important;
+}
+
+body.alto-contraste .destaque-card,
+body.alto-contraste .card-proposta,
+body.alto-contraste .card-ia {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffff00 !important;
+}
+
+body.alto-contraste .titulo-secao,
+body.alto-contraste .subtitulo,
+body.alto-contraste h4 {
+  color: #ffff00 !important;
   border-color: #ffff00 !important;
 }
 
-body.alto-contraste .btn-outline-dark {
+body.alto-contraste .table {
   color: #ffffff !important;
   border-color: #ffffff !important;
 }
 
-body.alto-contraste .badge {
-  background-color: #ffffff !important;
+body.alto-contraste .table-header-custom {
+  background-color: #ffff00 !important;
   color: #000000 !important;
 }

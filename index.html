@@ -11,90 +11,168 @@
 </head>
 <body>
 
-  <a class="skip-link visually-hidden-focusable" href="#conteudo-principal">Ir para o conteúdo principal</a>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
 
-  <header class="p-3 border-bottom shadow-sm">
-    <div class="container d-flex flex-wrap justify-content-between align-items-center">
-      <h1 class="h4 mb-0 fw-bold">Acessibilidade Digital</h1>
+  <header class="p-3 shadow-sm sticky-top header-custom">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+      <h1 class="h4 mb-0 fw-bold header-title">✨ Acessibilidade Digital & Ciência</h1>
       
-      <nav aria-label="Barra de Acessibilidade">
-        <div class="btn-group" role="group" aria-label="Opções de Acessibilidade">
-          <button type="button" id="btn-aumentar" class="btn btn-outline-dark" aria-label="Aumentar tamanho do texto">A+</button>
-          <button type="button" id="btn-diminuir" class="btn btn-outline-dark" aria-label="Diminuir tamanho do texto">A-</button>
-          <button type="button" id="btn-contraste" class="btn btn-dark" aria-label="Alternar modo de alto contraste">Alto Contraste 🌓</button>
+      <nav aria-label="Ferramentas de Acessibilidade">
+        <div class="d-flex flex-wrap gap-2">
+          
+          <div class="btn-group" role="group" aria-label="Ajuste de fonte">
+            <button type="button" id="btn-aumentar" class="btn btn-fonte" aria-label="Aumentar texto">A+</button>
+            <button type="button" id="btn-diminuir" class="btn btn-fonte" aria-label="Diminuir texto">A-</button>
+          </div>
+
+          <button type="button" id="btn-contraste" class="btn btn-contraste" aria-label="Ativar Alto Contraste">Alto Contraste 🌓</button>
+
+          <div class="btn-group" role="group" aria-label="Controle de Voz">
+            <button type="button" id="btn-ler-voz" class="btn btn-voz" aria-label="Ouvir texto da aba ativa">Ouvir Texto 🔊</button>
+            <button type="button" id="btn-parar-voz" class="btn btn-voz-parar d-none" aria-label="Parar leitura de voz">Parar ⏹️</button>
+          </div>
+
         </div>
       </nav>
     </div>
   </header>
 
-  <main id="conteudo-principal" class="container my-5">
-    
-    <section class="mb-5 text-center">
-      <h2 class="display-5 fw-bold mb-3">Luz, Ciência e Tecnologia Assistiva</h2>
-      <p class="lead">Plataforma educativa acessível focada na inclusão de pessoas com baixa visão e cegueira.</p>
+  <main id="conteudo-principal" class="container my-4">
+
+    <section class="mb-4 text-center hero-banner p-4 rounded-4 shadow">
+      <h2 class="display-6 fw-bold text-white">Pesquisas & Atividades Práticas</h2>
+      <p class="lead mb-0 text-white-50">Selecione uma aba para navegar pelas atividades do Projeto Integrador.</p>
     </section>
 
-    <section aria-labelledby="titulo-flashcards">
-      <h3 id="titulo-flashcards" class="h4 mb-4 border-bottom pb-2">Cartões de Estudo do Projeto</h3>
+    <ul class="nav nav-pills mb-4 nav-justified gap-2" id="abasAtividades" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active rounded-3 shadow-sm" id="fade-tab" data-bs-toggle="tab" data-bs-target="#fade-pane" type="button" role="tab" aria-controls="fade-pane" aria-selected="true">💡 1. LED Fade (PWM)</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link rounded-3 shadow-sm" id="rgb-tab" data-bs-toggle="tab" data-bs-target="#rgb-pane" type="button" role="tab" aria-controls="rgb-pane" aria-selected="false">🌈 2. LED RGB e Cores</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link rounded-3 shadow-sm" id="newton-tab" data-bs-toggle="tab" data-bs-target="#newton-pane" type="button" role="tab" aria-controls="newton-pane" aria-selected="false">⚪ 3. Disco de Newton</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link rounded-3 shadow-sm" id="proposta-tab" data-bs-toggle="tab" data-bs-target="#proposta-pane" type="button" role="tab" aria-controls="proposta-pane" aria-selected="false">🚀 4. Nossa Proposta & IA</button>
+      </li>
+    </ul>
 
-      <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="tab-content p-4 rounded-4 shadow-lg conteudo-box" id="conteudoAbas">
+
+      <article class="tab-pane fade show active" id="fade-pane" role="tabpanel" aria-labelledby="fade-tab">
+        <h3 class="h3 fw-bold mb-3 titulo-secao">Atividade 1 – Controle de Intensidade (LED Fade-In e Fade-Out)</h3>
         
-        <div class="col">
-          <article class="card h-100 shadow-sm border-2 card-customizado">
-            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Ilustração do circuito eletrônico no Tinkercad mostrando um LED conectado a um Arduino Uno por fios coloridos.">
-            <div class="card-body">
-              <span class="badge bg-primary mb-2">Atividade 1</span>
-              <h4 class="card-title h5 fw-bold">Controle PWM e Fade-In</h4>
-              <p class="card-text">
-                Aprenda como a variação suave da iluminação via PWM evita o ofuscamento visual e garante conforto para quem possui baixa visão.
-              </p>
-            </div>
-            <div class="card-footer bg-transparent border-0 pb-3">
-              <button class="btn btn-primary w-100 fw-bold p-3 fs-5" aria-label="Ler mais sobre o projeto Fade-In">Acessar Módulo</button>
-            </div>
-          </article>
-        </div>
+        <section class="mb-4 destaque-card p-3 rounded-3">
+          <h4 class="h5 fw-bold subtitulo">Apresentação da Atividade</h4>
+          <p class="mb-0">O objetivo desta atividade foi compreender o controle da intensidade luminosa utilizando um LED no Tinkercad, correlacionando eletrônica com tecnologia assistiva. Montamos o circuito com Arduino Uno, protoboard, resistor de 220 Ω e um LED conectado a uma porta PWM. Na simulação, programamos o sinal para variar gradualmente de 0 a 255 (Fade-In) e de 255 a 0 (Fade-Out), obtendo uma transição suave de brilho sem oscilações bruscas.</p>
+        </section>
 
-        <div class="col">
-          <article class="card h-100 shadow-sm border-2 card-customizado">
-            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Circuito de um LED RGB no simulador Tinkercad emitindo luz amarela pela mistura das cores vermelho e verde.">
-            <div class="card-body">
-              <span class="badge bg-success mb-2">Atividade 2</span>
-              <h4 class="card-title h5 fw-bold">Modelo RGB e Contrastes</h4>
-              <p class="card-text">
-                Entenda como a síntese aditiva de cores gera contrastes eficientes que facilitam a sinalização espacial e o reconhecimento de objetos.
-              </p>
-            </div>
-            <div class="card-footer bg-transparent border-0 pb-3">
-              <button class="btn btn-primary w-100 fw-bold p-3 fs-5" aria-label="Ler mais sobre o projeto LED RGB">Acessar Módulo</button>
-            </div>
-          </article>
-        </div>
+        <section class="mb-4 destaque-card p-3 rounded-3">
+          <h4 class="h5 fw-bold subtitulo">Explicação Científica</h4>
+          <ul>
+            <li><strong>Funcionamento do LED:</strong> Componente semicondutor que gera luz por eletroluminescência.</li>
+            <li><strong>Intensidade Luminosa & PWM:</strong> O PWM (Modulação por Largura de Pulso) liga e desliga o sinal rapidamente. Ajustando o tempo ligado (duty cycle), altera-se a percepção de brilho.</li>
+            <li><strong>Acessibilidade Visual:</strong> Evita o ofuscamento (glare) e reduz a fadiga ocular em pessoas com visão subnormal ou fotofobia.</li>
+          </ul>
+        </section>
 
-        <div class="col">
-          <article class="card h-100 shadow-sm border-2 card-customizado">
-            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Disco de papelão dividido em sete partes coloridas com as cores do arco-íris, preparado para rotação rápida.">
-            <div class="card-body">
-              <span class="badge bg-warning text-dark mb-2">Atividade 3</span>
-              <h4 class="card-title h5 fw-bold">Disco de Newton</h4>
-              <p class="card-text">
-                Demonstração prática da recomposição da luz branca a partir da rotação das cores do espectro e da persistência retiniana.
-              </p>
-            </div>
-            <div class="card-footer bg-transparent border-0 pb-3">
-              <button class="btn btn-primary w-100 fw-bold p-3 fs-5" aria-label="Ler mais sobre o Disco de Newton">Acessar Módulo</button>
-            </div>
-          </article>
-        </div>
+        <section class="mb-4">
+          <h4 class="h5 fw-bold subtitulo">Tecnologias Assistivas Existentes</h4>
+          <div class="table-responsive">
+            <table class="table table-hover table-bordered align-middle shadow-sm">
+              <thead class="table-header-custom">
+                <tr>
+                  <th scope="col">Tecnologia</th>
+                  <th scope="col">Finalidade</th>
+                  <th scope="col">Princípio Científico</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Lupa Eletrônica Digital</strong></td>
+                  <td>Ampliar textos com controle de brilho.</td>
+                  <td>Retroiluminação LED dimerizável via PWM.</td>
+                </tr>
+                <tr>
+                  <td><strong>Óculos OrCam MyEye</strong></td>
+                  <td>Leitura e reconhecimento por áudio.</td>
+                  <td>Visão computacional com LED auxiliar responsivo.</td>
+                </tr>
+                <tr>
+                  <td><strong>Bengala WeWALK</strong></td>
+                  <td>Sinalização e detecção aérea.</td>
+                  <td>Ultrassom com sinalizador luminoso ajustável.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </article>
 
-      </div>
-    </section>
+      <article class="tab-pane fade" id="rgb-pane" role="tabpanel" aria-labelledby="rgb-tab">
+        <h3 class="h3 fw-bold mb-3 titulo-secao">Atividade 2 – LED RGB e o Estudo das Cores</h3>
+        
+        <section class="mb-4 destaque-card p-3 rounded-3">
+          <h4 class="h5 fw-bold subtitulo">Apresentação e Circuito</h4>
+          <p class="mb-0">Simulamos um LED RGB de catodo comum no Tinkercad conectado a três portas PWM do Arduino. Através de códigos de controle, combinamos diferentes intensidades dos três canais para gerar cores mistas (como amarelo, ciano e magenta) e luz branca pura.</p>
+        </section>
+
+        <section class="mb-4 destaque-card p-3 rounded-3">
+          <h4 class="h5 fw-bold subtitulo">Modelo RGB e Síntese Aditiva</h4>
+          <p class="mb-0">O sistema RGB baseia-se na adição de luzes com diferentes frequências. A combinação dos canais Vermelho (Red), Verde (Green) e Azul (Blue) na intensidade máxima forma a luz branca. Variando os valores de 0 a 255 em cada canal, é possível criar mais de 16 milhões de cores.</p>
+        </section>
+
+        <section class="mb-4 destaque-card p-3 rounded-3">
+          <h4 class="h5 fw-bold subtitulo">Importância do Contraste</h4>
+          <p class="mb-0">Para pessoas com baixa visão ou daltonismo, o contraste cromático correto (ex: texto amarelo em fundo escuro) permite diferenciar bordas, saídas de emergência e obstáculos com muito mais clareza e segurança.</p>
+        </section>
+      </article>
+
+      <article class="tab-pane fade" id="newton-pane" role="tabpanel" aria-labelledby="newton-tab">
+        <h3 class="h3 fw-bold mb-3 titulo-secao">Atividade 3 – O Disco de Newton</h3>
+        
+        <section class="mb-4 destaque-card p-3 rounded-3">
+          <h4 class="h5 fw-bold subtitulo">Desenvolvimento e Montagem</h4>
+          <p class="mb-0">Construímos o experimento recortando um disco de papelão rígido dividido em sete setores iguais, pintados com as cores do espectro visível (vermelho, laranja, amarelo, verde, azul, anil e violeta). Através de um barbante passado pelo centro, fizemos o disco girar em alta velocidade.</p>
+        </section>
+
+        <section class="mb-4 destaque-card p-3 rounded-3">
+          <h4 class="h5 fw-bold subtitulo">Resultado Obtido</h4>
+          <p class="mb-0">Ao atingir alta rotação, as cores individuais se fundiram na percepção visual devido ao fenômeno da persistência retiniana, gerando uma tonalidade uniforme próxima ao branco. Isso provou na prática que a luz branca é a soma de todas as cores visíveis.</p>
+        </section>
+      </article>
+
+      <article class="tab-pane fade" id="proposta-pane" role="tabpanel" aria-labelledby="proposta-tab">
+        <h3 class="h3 fw-bold mb-3 titulo-secao">Nossa Proposta Assistiva & Uso de IA</h3>
+        
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card h-100 card-proposta p-4 rounded-4 shadow-sm">
+              <h4 class="h5 fw-bold border-bottom pb-2" style="color: #059669;">💡 Projeto "GuiaLuz"</h4>
+              <p><strong>Problema:</strong> Quedas e perda de orientação em degraus e corredores devido a mudanças bruscas de iluminação.</p>
+              <p><strong>Funcionamento:</strong> Sistema com fitas LED RGB e sensores de presença. Ao detectar o usuário, aciona um <em>Fade-In</em> suave com cores de alto contraste ajustadas para o ambiente.</p>
+              <p class="mb-0"><strong>Público-Alvo:</strong> Idosos e pessoas com baixa visão.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card h-100 card-ia p-4 rounded-4 shadow-sm">
+              <h4 class="h5 fw-bold border-bottom pb-2" style="color: #2563eb;">🤖 Uso da Inteligência Artificial</h4>
+              <p><strong>Ferramentas:</strong> ChatGPT / Gemini.</p>
+              <p><strong>Aplicações no Projeto:</strong> Brainstorming de funcionalidades, estruturação de dados de acessibilidade e auxílio na síntese teórica sobre PWM e ótica.</p>
+              <p class="mb-0"><strong>Validação:</strong> Todos os dados foram conferidos em documentações da ABNT e manuais técnicos de fabricantes.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
   </main>
 
-  <footer class="bg-light text-center text-lg-start mt-5 border-top p-4">
-    <div class="container text-center">
-      <p class="mb-0">Projeto Integrador - Tecnologia Assistiva e Acessibilidade Digital | 2º Trimestre</p>
-    </div>
+  <footer class="footer-custom text-center border-top p-4 mt-5">
+    <p class="mb-0 fw-semibold">Projeto Integrador – Soluções Digitais para Acessibilidade | 2º Trimestre</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
