@@ -1,8 +1,8 @@
 /* Configurações Globais */
 :root {
   --fonte-tamanho-base: 1rem;
-  --cor-principal: #4f46e5;      /* Roxo/Azul vibrante moderno */
-  --cor-secundaria: #06b6d4;     /* Ciano moderno */
+  --cor-principal: #4f46e5;
+  --cor-secundaria: #06b6d4;
   --fundo-pagina: #f8fafc;
   --fundo-card: #ffffff;
   --texto-cor: #1e293b;
@@ -65,6 +65,27 @@ header {
 .btn-contraste:hover {
   background-color: #d97706;
   color: #ffffff;
+}
+
+/* Botões de Leitura por Voz */
+.btn-voz {
+  background-color: #10b981;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+}
+.btn-voz:hover {
+  background-color: #059669;
+}
+
+.btn-voz-parar {
+  background-color: #ef4444;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+}
+.btn-voz-parar:hover {
+  background-color: #dc2626;
 }
 
 /* Banner de Boas-Vindas */

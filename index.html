@@ -14,14 +14,24 @@
   <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
 
   <header class="p-3 shadow">
-    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
       <h1 class="h4 mb-0 fw-bold header-title">✨ Acessibilidade Digital & Ciência</h1>
       
       <nav aria-label="Ferramentas de Acessibilidade">
-        <div class="btn-group" role="group">
-          <button type="button" id="btn-aumentar" class="btn btn-acessibilidade" aria-label="Aumentar texto">A+</button>
-          <button type="button" id="btn-diminuir" class="btn btn-acessibilidade" aria-label="Diminuir texto">A-</button>
+        <div class="d-flex flex-wrap gap-2">
+          
+          <div class="btn-group" role="group" aria-label="Ajuste de fonte">
+            <button type="button" id="btn-aumentar" class="btn btn-acessibilidade" aria-label="Aumentar texto">A+</button>
+            <button type="button" id="btn-diminuir" class="btn btn-acessibilidade" aria-label="Diminuir texto">A-</button>
+          </div>
+
           <button type="button" id="btn-contraste" class="btn btn-contraste" aria-label="Ativar Alto Contraste">Alto Contraste 🌓</button>
+
+          <div class="btn-group" role="group" aria-label="Controle de Voz">
+            <button type="button" id="btn-ler-voz" class="btn btn-voz" aria-label="Ouvir leitura do texto da aba ativa">Ouvir Texto 🔊</button>
+            <button type="button" id="btn-parar-voz" class="btn btn-voz-parar d-none" aria-label="Parar leitura por voz">Parar ⏹️</button>
+          </div>
+
         </div>
       </nav>
     </div>
@@ -130,7 +140,7 @@
 
         <section class="mb-4 destaque-card p-3 rounded-3">
           <h4 class="h5 fw-bold subtitulo">Resultado Obtido</h4>
-          <p class="mb-0">Ao atingir alta rotação, as cores individuais se fundiram na percepção visual devido ao fenômeno da persistência retiniana, gerando uma tonalidade uniforme próxima ao branco. Isso provou na prática que a luz branca é a soma de todas as cores visíveis.</p>
+          <p class="mb-0">Ao atingir alta rotação, as cores individuais se fundiram na perception visual devido ao fenômeno da persistência retiniana, gerando uma tonalidade uniforme próxima ao branco. Isso provou na prática que a luz branca é a soma de todas as cores visíveis.</p>
         </section>
       </article>
 
