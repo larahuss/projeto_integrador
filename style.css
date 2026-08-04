@@ -1,204 +1,57 @@
+/* Configurações Globais de Tipografia e Acessibilidade */
 :root {
   --fonte-tamanho-base: 1rem;
-  --cor-principal: #4f46e5;
-  --cor-secundaria: #06b6d4;
-  --fundo-pagina: #f8fafc;
-  --fundo-card: #ffffff;
-  --texto-cor: #1e293b;
 }
 
 body {
   font-size: var(--fonte-tamanho-base);
   line-height: 1.6;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--fundo-pagina);
-  color: var(--texto-cor);
+  font-family: Arial, Helvetica, sans-serif; /* Tipografia limpa sem serifa */
   transition: background-color 0.3s, color 0.3s;
 }
 
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: #000;
-  color: #fff;
-  padding: 8px;
-  z-index: 100;
-}
-.skip-link:focus {
-  top: 0;
+/* Bordas claras e destacadas para baixa visão */
+.card-customizado {
+  border: 2px solid #212529 !important;
+  border-radius: 8px;
 }
 
+/* Foco Visível para Navegação por Teclado (Tab) */
 a:focus, button:focus {
-  outline: 4px solid #f59e0b !important;
+  outline: 4px solid #ffc107 !important;
   outline-offset: 2px;
 }
 
-header {
-  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
-}
-.header-title {
-  color: #f8fafc;
-}
-
-.btn-acessibilidade {
-  background-color: #ffffff;
-  color: #1e1b4b;
-  font-weight: bold;
-  border: none;
-}
-.btn-acessibilidade:hover {
-  background-color: #e2e8f0;
-}
-
-.btn-contraste {
-  background-color: #f59e0b;
-  color: #000000;
-  font-weight: bold;
-  border: none;
-}
-.btn-contraste:hover {
-  background-color: #d97706;
-  color: #ffffff;
-}
-
-.btn-voz {
-  background-color: #10b981;
-  color: #ffffff;
-  font-weight: bold;
-  border: none;
-}
-.btn-voz:hover {
-  background-color: #059669;
-}
-
-.btn-voz-parar {
-  background-color: #ef4444;
-  color: #ffffff;
-  font-weight: bold;
-  border: none;
-}
-.btn-voz-parar:hover {
-  background-color: #dc2626;
-}
-
-.hero-banner {
-  background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
-  color: #ffffff;
-}
-
-.nav-tabs .nav-link {
-  font-weight: bold;
-  color: #475569;
-  background-color: #e2e8f0;
-  border: 2px solid #cbd5e1;
-  transition: all 0.3s ease;
-}
-
-.nav-tabs .nav-link:hover {
-  background-color: #cbd5e1;
-  color: #0f172a;
-}
-
-.nav-tabs .nav-link.active {
-  background-color: #4f46e5 !important;
-  color: #ffffff !important;
-  border-color: #4f46e5 !important;
-  box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.4);
-}
-
-.conteudo-box {
-  background-color: var(--fundo-card);
-  border: 2px solid #e2e8f0;
-}
-
-.titulo-secao {
-  color: #312e81;
-  border-bottom: 3px solid #06b6d4;
-  padding-bottom: 8px;
-}
-
-.subtitulo {
-  color: #4f46e5;
-}
-
-.destaque-card {
-  background-color: #f1f5f9;
-  border-left: 5px solid #06b6d4;
-}
-
-.table-header-custom {
-  background-color: #312e81;
-  color: #ffffff;
-}
-
-.card-proposta {
-  border: 2px solid #22c55e;
-  background-color: #f0fdf4;
-}
-
-.card-ia {
-  border: 2px solid #3b82f6;
-  background-color: #eff6ff;
-}
-
-.footer-custom {
-  background-color: #0f172a;
-  color: #f8fafc;
-}
-
-/* Modo Alto Contraste */
+/* Modificador: Alto Contraste */
 body.alto-contraste {
   background-color: #000000 !important;
   color: #ffffff !important;
 }
 
 body.alto-contraste header,
-body.alto-contraste .footer-custom,
-body.alto-contraste .conteudo-box {
+body.alto-contraste footer {
+  background-color: #121212 !important;
+  border-color: #ffffff !important;
+}
+
+body.alto-contraste .card {
   background-color: #000000 !important;
   color: #ffffff !important;
-  border: 2px solid #ffff00 !important;
+  border: 3px solid #ffff00 !important; /* Borda amarela em alto contraste */
 }
 
-body.alto-contraste .hero-banner {
-  background: #000000 !important;
-  border: 3px solid #ffff00 !important;
-  color: #ffff00 !important;
-}
-
-body.alto-contraste .nav-tabs .nav-link {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-  border: 2px solid #ffffff !important;
-}
-
-body.alto-contraste .nav-tabs .nav-link.active {
+body.alto-contraste .btn-primary {
   background-color: #ffff00 !important;
   color: #000000 !important;
-  border: 2px solid #ffff00 !important;
-}
-
-body.alto-contraste .destaque-card,
-body.alto-contraste .card-proposta,
-body.alto-contraste .card-ia {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-  border: 2px solid #ffff00 !important;
-}
-
-body.alto-contraste .subtitulo,
-body.alto-contraste .titulo-secao {
-  color: #ffff00 !important;
   border-color: #ffff00 !important;
 }
 
-body.alto-contraste .table {
+body.alto-contraste .btn-outline-dark {
   color: #ffffff !important;
   border-color: #ffffff !important;
 }
 
-body.alto-contraste .table-header-custom {
+body.alto-contraste .badge {
   background-color: #ffffff !important;
   color: #000000 !important;
 }
