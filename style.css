@@ -1,4 +1,3 @@
-/* Configurações Globais */
 :root {
   --fonte-tamanho-base: 1rem;
   --cor-principal: #4f46e5;
@@ -17,7 +16,6 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Atalho para leitor de tela */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -31,13 +29,11 @@ body {
   top: 0;
 }
 
-/* Tecla Tab em Evidência */
 a:focus, button:focus {
   outline: 4px solid #f59e0b !important;
   outline-offset: 2px;
 }
 
-/* Header Estilizado */
 header {
   background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
 }
@@ -45,7 +41,6 @@ header {
   color: #f8fafc;
 }
 
-/* Botões da Barra de Acessibilidade */
 .btn-acessibilidade {
   background-color: #ffffff;
   color: #1e1b4b;
@@ -67,7 +62,6 @@ header {
   color: #ffffff;
 }
 
-/* Botões de Leitura por Voz */
 .btn-voz {
   background-color: #10b981;
   color: #ffffff;
@@ -88,13 +82,11 @@ header {
   background-color: #dc2626;
 }
 
-/* Banner de Boas-Vindas */
 .hero-banner {
   background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
   color: #ffffff;
 }
 
-/* Estilização das Abas */
 .nav-tabs .nav-link {
   font-weight: bold;
   color: #475569;
@@ -115,7 +107,6 @@ header {
   box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.4);
 }
 
-/* Container do Conteúdo */
 .conteudo-box {
   background-color: var(--fundo-card);
   border: 2px solid #e2e8f0;
@@ -131,19 +122,16 @@ header {
   color: #4f46e5;
 }
 
-/* Cards Intermediários */
 .destaque-card {
   background-color: #f1f5f9;
   border-left: 5px solid #06b6d4;
 }
 
-/* Tabela Personalizada */
 .table-header-custom {
   background-color: #312e81;
   color: #ffffff;
 }
 
-/* Cards da Proposta */
 .card-proposta {
   border: 2px solid #22c55e;
   background-color: #f0fdf4;
@@ -154,15 +142,12 @@ header {
   background-color: #eff6ff;
 }
 
-/* Rodapé */
 .footer-custom {
   background-color: #0f172a;
   color: #f8fafc;
 }
 
-/* ====================================
-   ESTILOS DO MODO ALTO CONTRASTE 🌓
-   ==================================== */
+/* Modo Alto Contraste */
 body.alto-contraste {
   background-color: #000000 !important;
   color: #ffffff !important;
