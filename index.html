@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luz, Ciência e Acessibilidade - Projeto Integrador</title>
-  
-  <link href="https://jsdelivr.net" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css">
 </head>
@@ -16,10 +16,10 @@
   <header class="p-3 shadow-sm sticky-top header-custom">
     <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
       <h1 class="h4 mb-0 fw-bold header-title">✨ Acessibilidade Digital & Ciência</h1>
-      
+     
       <nav aria-label="Ferramentas de Acessibilidade">
         <div class="d-flex flex-wrap gap-2">
-          
+         
           <div class="btn-group" role="group" aria-label="Ajuste de fonte">
             <button type="button" id="btn-aumentar" class="btn btn-fonte" aria-label="Aumentar texto">A+</button>
             <button type="button" id="btn-diminuir" class="btn btn-fonte" aria-label="Diminuir texto">A-</button>
@@ -39,35 +39,24 @@
 
   <main id="conteudo-principal" class="container my-4">
 
-    <!-- SEÇÃO DE INTRODUÇÃO E RESUMO -->
-    <section class="mb-5 p-4 bg-white rounded-4 shadow-sm border border-light">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-7">
-          <h2 class="h3 fw-bold text-dark mb-3">Sobre o Projeto</h2>
-          <p class="lead fs-6 text-muted mb-0">
-            Este portal apresenta os resultados teóricos e práticos do nosso Projeto Integrador, onde investigamos a física da luz, a eletrônica aplicada (filtros PWM e LEDs RGB) e o fenômeno óptico do Disco de Newton. Nosso objetivo central é conectar a ciência básica ao desenvolvimento de tecnologias assistivas de alto impacto, promovendo inclusão e segurança para pessoas com baixa visão.
-          </p>
-        </div>
-        <div class="col-lg-5">
-          <!-- Alerta contra Fake News integrado com Bootstrap -->
-          <div class="p-3 bg-danger-subtle border-start border-danger border-4 rounded-end-3" role="alert">
-            <h3 class="h6 fw-bold text-danger mb-2">⚠️ Alerta contra Fake News Científicas</h3>
-            <p class="small text-danger-emphasis mb-2">
-              A desinformação em tecnologia e saúde visual pode gerar riscos reais. Proteja-se seguindo estas diretrizes:
-            </p>
-            <ul class="small text-danger-emphasis ps-3 mb-0">
-              <li><strong>Evite receitas milagrosas:</strong> Terapias visuais com luzes RGB sem validação médica são perigosas.</li>
-              <li><strong>Cheque os dados de IA:</strong> Inteligências artificiais geram textos rápidos, mas precisam de revisão técnica e humana.</li>
-              <li><strong>Fontes Oficiais:</strong> Baseie seus projetos em normas técnicas da ABNT ou em artigos científicos revisados por pares.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="mb-4 text-center hero-banner p-4 rounded-4 shadow">
       <h2 class="display-6 fw-bold text-white">Pesquisas & Atividades Práticas</h2>
       <p class="lead mb-0 text-white-50">Selecione uma aba para navegar pelas atividades do Projeto Integrador.</p>
+    </section>
+
+    <section class="mb-4 destaque-card p-4 rounded-4 shadow-sm">
+      <h3 class="h4 fw-bold subtitulo mb-3">Sobre o Projeto</h3>
+      <p>Este portal apresenta os resultados teóricos e práticos do nosso Projeto Integrador, onde investigamos a física da luz, a eletrônica aplicada (filtros PWM e LEDs RGB) e o fenômeno óptico do Disco de Newton. Nosso objetivo central é conectar a ciência básica ao desenvolvimento de tecnologias assistivas de alto impacto, promovendo inclusão e segurança para pessoas com baixa visão.</p>
+      
+      <hr class="my-4">
+
+      <h4 class="h5 fw-bold text-danger mb-3">⚠️ Alerta contra Fake News Científicas</h4>
+      <p class="mb-2">A desinformação em tecnologia e saúde visual pode gerar riscos reais. Proteja-se seguindo estas diretrizes:</p>
+      <ul class="mb-0">
+        <li><strong>Evite receitas milagrosas:</strong> Terapias visuais com luzes RGB sem validação médica são perigosas.</li>
+        <li><strong>Cheque os dados de IA:</strong> Inteligências artificiais geram textos rápidos, mas precisam de revisão técnica e humana.</li>
+        <li><strong>Fontes Oficiais:</strong> Baseie seus projetos em normas técnicas da ABNT ou em artigos científicos revisados por pares.</li>
+      </ul>
     </section>
 
     <ul class="nav nav-pills mb-4 nav-justified gap-2" id="abasAtividades" role="tablist">
@@ -89,7 +78,7 @@
 
       <article class="tab-pane fade show active" id="fade-pane" role="tabpanel" aria-labelledby="fade-tab">
         <h3 class="h3 fw-bold mb-3 titulo-secao">Atividade 1 – Controle de Intensidade (LED Fade-In e Fade-Out)</h3>
-        
+       
         <section class="mb-4 destaque-card p-3 rounded-3">
           <h4 class="h5 fw-bold subtitulo">Apresentação da Atividade</h4>
           <p class="mb-0">O objetivo desta atividade foi compreender o controle da intensidade luminosa utilizando um LED no Tinkercad, correlacionando eletrônica com tecnologia assistiva. Montamos o circuito com Arduino Uno, protoboard, resistor de 220 Ω e um LED conectado a uma porta PWM. Na simulação, programamos o sinal para variar gradualmente de 0 a 255 (Fade-In) e de 255 a 0 (Fade-Out), obtendo uma transição suave de brilho sem oscilações bruscas.</p>
@@ -108,8 +97,8 @@
           <h4 class="h5 fw-bold subtitulo">Tecnologias Assistivas Existentes</h4>
           <div class="table-responsive">
             <table class="table table-hover table-bordered align-middle shadow-sm">
-              <thead class="table-header-custom">
-                <tr>
+              <thead>
+                <tr class="table-header-custom">
                   <th scope="col">Tecnologia</th>
                   <th scope="col">Finalidade</th>
                   <th scope="col">Princípio Científico</th>
@@ -139,7 +128,7 @@
 
       <article class="tab-pane fade" id="rgb-pane" role="tabpanel" aria-labelledby="rgb-tab">
         <h3 class="h3 fw-bold mb-3 titulo-secao">Atividade 2 – LED RGB e o Estudo das Cores</h3>
-        
+       
         <section class="mb-4 destaque-card p-3 rounded-3">
           <h4 class="h5 fw-bold subtitulo">Apresentação e Circuito</h4>
           <p class="mb-0">Simulamos um LED RGB de catodo comum no Tinkercad conectado a três portas PWM do Arduino. Através de códigos de controle, combinamos diferentes intensidades dos três canais para gerar cores mistas (como amarelo, ciano e magenta) e luz branca pura.</p>
@@ -158,6 +147,50 @@
 
       <article class="tab-pane fade" id="newton-pane" role="tabpanel" aria-labelledby="newton-tab">
         <h3 class="h3 fw-bold mb-3 titulo-secao">Atividade 3 – O Disco de Newton</h3>
-        
+       
         <section class="mb-4 destaque-card p-3 rounded-3">
           <h4 class="h5 fw-bold subtitulo">Desenvolvimento e Montagem</h4>
+          <p class="mb-0">Construímos o experimento recortando um disco de papelão rígido dividido em sete setores iguais, pintados com as cores do espectro visível (vermelho, laranja, amarelo, verde, azul, anil e violeta). Através de um barbante passado pelo centro, fizemos o disco girar em alta velocidade.</p>
+        </section>
+
+        <section class="mb-4 destaque-card p-3 rounded-3">
+          <h4 class="h5 fw-bold subtitulo">Resultado Obtido</h4>
+          <p class="mb-0">Ao atingir alta rotação, as cores individuais se fundiram na percepção visual devido ao fenômeno da persistência retiniana, gerando uma tonalidade uniforme próxima ao branco. Isso provou na prática que a luz branca é a soma de todas as cores visíveis.</p>
+        </section>
+      </article>
+
+      <article class="tab-pane fade" id="proposta-pane" role="tabpanel" aria-labelledby="proposta-tab">
+        <h3 class="h3 fw-bold mb-3 titulo-secao">Nossa Proposta Assistiva & Uso de IA</h3>
+       
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card h-100 card-proposta p-4 rounded-4 shadow-sm">
+              <h4 class="h5 fw-bold border-bottom pb-2">💡 Projeto "GuiaLuz"</h4>
+              <p><strong>Problema:</strong> Quedas e perda de orientação em degraus e corredores devido a mudanças bruscas de iluminação.</p>
+              <p><strong>Funcionamento:</strong> Sistema com fitas LED RGB e sensores de presença. Ao detectar o usuário, aciona um <em>Fade-In</em> suave com cores de alto contraste ajustadas para o ambiente.</p>
+              <p class="mb-0"><strong>Público-Alvo:</strong> Idosos e pessoas com baixa visão.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card h-100 card-ia p-4 rounded-4 shadow-sm">
+              <h4 class="h5 fw-bold border-bottom pb-2">🤖 Uso da Inteligência Artificial</h4>
+              <p><strong>Ferramentas:</strong> ChatGPT / Gemini.</p>
+              <p><strong>Aplicações no Projeto:</strong> Brainstorming de funcionalidades, estruturação de dados de acessibilidade e auxílio na síntese teórica sobre PWM e ótica.</p>
+              <p class="mb-0"><strong>Validação:</strong> Todos os dados foram conferidos em documentações da ABNT e manuais técnicos de fabricantes.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="footer-custom text-center border-top p-4 mt-5">
+    <p class="mb-0 fw-semibold">Projeto Integrador – Soluções Digitais para Acessibilidade | 2º Trimestre</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
