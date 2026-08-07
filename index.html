@@ -49,7 +49,7 @@
       <p>Este portal apresenta os resultados teóricos e práticos do nosso Projeto Integrador, onde investigamos a física da luz, a eletrônica applied (filtros PWM e LEDs RGB) e o fenômeno óptico do Disco de Newton. Nosso objetivo central é conectar a ciência básica ao desenvolvimento de tecnologias assistivas de alto impacto, promovendo inclusão e segurança para pessoas com baixa visão.</p>
       
       <div class="text-center my-3">
-        <img src="https://via.placeholder.com/800x400?text=Imagem+Sobre+o+Projeto" alt="Imagem ilustrativa sobre o projeto integrador" class="img-fluid rounded shadow-sm">
+        <img src="LINK_DA_SUA_FOTO_SOBRE_PROJETO_AQUI" alt="Imagem ilustrativa sobre o projeto integrador" class="img-fluid rounded shadow-sm">
       </div>
 
       <hr class="my-4">
@@ -85,132 +85,19 @@
        
         <section class="mb-4 destaque-card p-3 rounded-3">
           <h4 class="h5 fw-bold subtitulo">Apresentação da Atividade</h4>
-          <p class="mb-0">O objetivo desta atividade foi compreender o controle da intensidade luminosa utilizando um LED no Tinkercad, correlacionando eletrônica com tecnologia assistiva. Montamos o circuito com Arduino Uno, protoboard, resistor de 220 Ω e um LED conectado a uma porta PWM. Na simulação, programamos o sinal para variar gradualmente de 0 a 255 (Fade-In) e de 255 a 0 (Fade-Out), obtendo uma transição suave de brilho sem oscilações bruscas.</p>
+          <p class="mb-3">O objetivo desta atividade foi compreender o controle da intensidade luminosa utilizando um LED no Tinkercad, correlacionando eletrônica com tecnologia assistiva. Montamos o circuito com Arduino Uno, protoboard, resistor de 220 Ω e um LED conectado a uma porta PWM. Na simulação, programamos o sinal para variar gradualmente de 0 a 255 (Fade-In) e de 255 a 0 (Fade-Out), obtendo uma transição suave de brilho sem oscilações bruscas.</p>
           
-          <div class="text-center mt-3">
-            <img src="https://docs.google.com/document/d/1Z1wUpod2poL004v17hpqljHbXIn8ufOdifWQe-exOlA/edit?tab=t.0" alt="Foto do circuito LED Fade no Tinkercad" class="img-fluid rounded shadow-sm">
-          </div>
-        </section>
+          <h5 class="h6 fw-bold mt-4 mb-3 text-secondary">📸 Galeria da Simulação & Vídeo de Funcionamento</h5>
 
-        <section class="mb-4 destaque-card p-3 rounded-3">
-          <h4 class="h5 fw-bold subtitulo">Explicação Científica</h4>
-          <ul>
-            <li><strong>Funcionamento do LED:</strong> Componente semicondutor que gera luz por eletroluminescência.</li>
-            <li><strong>Intensidade Luminosa & PWM:</strong> O PWM (Modulação por Largura de Pulso) liga e desliga o sinal rapidamente. Ajustando o tempo ligado (duty cycle), altera-se a percepção de brilho.</li>
-            <li><strong>Acessibilidade Visual:</strong> Evita o ofuscamento (glare) e reduz a fadiga ocular em pessoas com visão subnormal ou fotofobia.</li>
-          </ul>
-        </section>
-
-        <section class="mb-4">
-          <h4 class="h5 fw-bold subtitulo">Tecnologias Assistivas Existentes</h4>
-          <div class="table-responsive">
-            <table class="table table-hover table-bordered align-middle shadow-sm">
-              <thead>
-                <tr class="table-header-custom">
-                  <th scope="col">Tecnologia</th>
-                  <th scope="col">Finalidade</th>
-                  <th scope="col">Princípio Científico</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Lupa Eletrônica Digital</strong></td>
-                  <td>Ampliar textos com controle de brilho.</td>
-                  <td>Retroiluminação LED dimerizável via PWM.</td>
-                </tr>
-                <tr>
-                  <td><strong>Óculos OrCam MyEye</strong></td>
-                  <td>Leitura e reconhecimento por áudio.</td>
-                  <td>Visão computacional com LED auxiliar responsivo.</td>
-                </tr>
-                <tr>
-                  <td><strong>Bengala WeWALK</strong></td>
-                  <td>Sinalização e detecção aérea.</td>
-                  <td>Ultrassom com sinalizador luminoso ajustável.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-      </article>
-
-      <article class="tab-pane fade" id="rgb-pane" role="tabpanel" aria-labelledby="rgb-tab">
-        <h3 class="h3 fw-bold mb-3 titulo-secao">Atividade 2 – LED RGB e o Estudo das Cores</h3>
-       
-        <section class="mb-4 destaque-card p-3 rounded-3">
-          <h4 class="h5 fw-bold subtitulo">Apresentação e Circuito</h4>
-          <p class="mb-0">Simulamos um LED RGB de catodo comum no Tinkercad conectado a três portas PWM do Arduino. Através de códigos de controle, combinamos diferentes intensidades dos três canais para gerar cores mistas (como amarelo, ciano e magenta) e luz branca pura.</p>
-          
-          <div class="text-center mt-3">
-            <img src="https://via.placeholder.com/700x350?text=Circuito+LED+RGB" alt="Foto do experimento com LED RGB" class="img-fluid rounded shadow-sm">
-          </div>
-        </section>
-
-        <section class="mb-4 destaque-card p-3 rounded-3">
-          <h4 class="h5 fw-bold subtitulo">Modelo RGB e Síntese Aditiva</h4>
-          <p class="mb-0">O sistema RGB baseia-se na adição de luzes com diferentes frequências. A combinação dos canais Vermelho (Red), Verde (Green) e Azul (Blue) na intensidade máxima forma a luz branca. Variando os valores de 0 a 255 em cada canal, é possível criar mais de 16 milhões de cores.</p>
-        </section>
-
-        <section class="mb-4 destaque-card p-3 rounded-3">
-          <h4 class="h5 fw-bold subtitulo">Importância do Contraste</h4>
-          <p class="mb-0">Para pessoas com baixa visão ou daltonismo, o contraste cromático correto (ex: texto amarelo em fundo escuro) permite diferenciar bordas, saídas de emergência e obstáculos com muito mais clareza e segurança.</p>
-        </section>
-      </article>
-
-      <article class="tab-pane fade" id="newton-pane" role="tabpanel" aria-labelledby="newton-tab">
-        <h3 class="h3 fw-bold mb-3 titulo-secao">Atividade 3 – O Disco de Newton</h3>
-       
-        <section class="mb-4 destaque-card p-3 rounded-3">
-          <h4 class="h5 fw-bold subtitulo">Desenvolvimento e Montagem</h4>
-          <p class="mb-0">Construímos o experimento recortando um disco de papelão rígido dividido em sete setores iguais, pintados com as cores do espectro visível (vermelho, laranja, amarelo, verde, azul, anil e violeta). Através de um barbante passado pelo centro, fizemos o disco girar em alta velocidade.</p>
-          
-          <div class="text-center mt-3">
-            <img src="https://via.placeholder.com/700x350?text=Disco+de+Newton+Montado" alt="Foto da montagem do Disco de Newton" class="img-fluid rounded shadow-sm">
-          </div>
-        </section>
-
-        <section class="mb-4 destaque-card p-3 rounded-3">
-          <h4 class="h5 fw-bold subtitulo">Resultado Obtido</h4>
-          <p class="mb-0">Ao atingir alta rotação, as cores individuais se fundiram na percepção visual devido ao fenômeno da persistência retiniana, gerando uma tonalidade uniforme próxima ao branco. Isso provou na prática que a luz branca é a soma de todas as cores visíveis.</p>
-        </section>
-      </article>
-
-      <article class="tab-pane fade" id="proposta-pane" role="tabpanel" aria-labelledby="proposta-tab">
-        <h3 class="h3 fw-bold mb-3 titulo-secao">Nossa Proposta Assistiva & Uso de IA</h3>
-       
-        <div class="row g-4 mb-4">
-          <div class="col-md-6">
-            <div class="card h-100 card-proposta p-4 rounded-4 shadow-sm">
-              <h4 class="h5 fw-bold border-bottom pb-2">💡 Projeto "GuiaLuz"</h4>
-              <p><strong>Problema:</strong> Quedas e perda de orientação em degraus e corredores devido a mudanças bruscas de iluminação.</p>
-              <p><strong>Funcionamento:</strong> Sistema com fitas LED RGB e sensores de presença. Ao detectar o usuário, aciona um <em>Fade-In</em> suave com cores de alto contraste ajustadas para o ambiente.</p>
-              <p class="mb-0"><strong>Público-Alvo:</strong> Idosos e pessoas com baixa visão.</p>
+          <div class="row g-3 mb-4">
+            <div class="col-md-6 text-center">
+              <figure class="figure w-100 mb-0">
+                <img src="LINK_DA_FOTO_CIRCUITO_FADE_AQUI" alt="Esquema do circuito LED Fade no Tinkercad" class="img-fluid rounded shadow-sm figure-img">
+                <figcaption class="figure-caption">Figura 1: Montagem do circuito com Arduino, resistor e LED em pino PWM no Tinkercad.</figcaption>
+              </figure>
             </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="card h-100 card-ia p-4 rounded-4 shadow-sm">
-              <h4 class="h5 fw-bold border-bottom pb-2">🤖 Uso da Inteligência Artificial</h4>
-              <p><strong>Ferramentas:</strong> ChatGPT / Gemini.</p>
-              <p><strong>Aplicações no Projeto:</strong> Brainstorming de funcionalidades, estruturação de dados de acessibilidade e auxílio na síntese teórica sobre PWM e ótica.</p>
-              <p class="mb-0"><strong>Validação:</strong> Todos os dados foram conferidos em documentações da ABNT e manuais técnicos de fabricantes.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center">
-          <img src="https://via.placeholder.com/800x350?text=Esquema+do+Projeto+GuiaLuz" alt="Protótipo ou esquema do projeto GuiaLuz" class="img-fluid rounded shadow-sm">
-        </div>
-      </article>
-
-    </div>
-  </main>
-
-  <footer class="footer-custom text-center border-top p-4 mt-5">
-    <p class="mb-0 fw-semibold">Projeto Integrador – Soluções Digitais para Acessibilidade | 2º Trimestre</p>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
+            
+            <div class="col-md-6 text-center">
+              <figure class="figure w-100 mb-0">
+                <img src="LINK_DA_FOTO_CODIGO_FADE_AQUI" alt="Bloco ou código da programação do Fade" class="img-fluid rounded shadow-sm figure-img">
+                <figcaption class="figure-caption">Figura 2: Código C++ de controle de variância de brilho (0 a 255 e 255 a 0).</figcaption>
