@@ -8,6 +8,22 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Estilos para o Alto Contraste */
+    body.alto-contraste {
+      background-color: #000000 !important;
+      color: #FFFF00 !important;
+    }
+    body.alto-contraste * {
+      background-color: #000000 !important;
+      color: #FFFF00 !important;
+      border-color: #FFFF00 !important;
+    }
+    body.alto-contraste a, body.alto-contraste button {
+      color: #00FFFF !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -189,8 +205,7 @@
             <div class="col-md-4 text-center">
               <figure class="figure w-100 mb-0">
                 <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/7695527-espectro-de-luz-visivel-espectro-eletromagnetico-visivel-espectro-de-cor-para-olho-humano-diagrama-gradiente-com-comprimento-de-onda-e-cores-ilustracao-educacional-em-fundo-branco-vetor.jpg" alt="Disco de Newton parado com cores visíveis" class="img-fluid rounded shadow-sm figure-img">
-                <figcaption class="figure-caption">Figura 1: Espectro de luz visível. Espectro eletromagnético de cores visíveis ao olho humano. Diagrama vetorial com gradiente, comprimentos de onda e cores. Ilustração educativa em fundo branco. Fonte: Getty Images
-.</figcaption>
+                <figcaption class="figure-caption">Figura 1: Espectro de luz visível. Espectro eletromagnético de cores visíveis ao olho humano. Diagrama vetorial com gradiente, comprimentos de onda e cores. Ilustração educativa em fundo branco. Fonte: Getty Images.</figcaption>
               </figure>
             </div>
             
@@ -238,5 +253,67 @@
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let tamanhoFonte = 100;
+      const btnOuvir = document.getElementById('btn-ler-voz');
+      const btnParar = document.getElementById('btn-parar-voz');
+
+      // 1. Aumentar e Diminuir Fonte
+      document.getElementById('btn-aumentar').addEventListener('click', () => {
+        if (tamanhoFonte < 150) {
+          tamanhoFonte += 10;
+          document.body.style.fontSize = tamanhoFonte + '%';
+        }
+      });
+
+      document.getElementById('btn-diminuir').addEventListener('click', () => {
+        if (tamanhoFonte > 80) {
+          tamanhoFonte -= 10;
+          document.body.style.fontSize = tamanhoFonte + '%';
+        }
+      });
+
+      // 2. Alto Contraste
+      document.getElementById('btn-contraste').addEventListener('click', () => {
+        document.body.classList.toggle('alto-contraste');
+      });
+
+      // 3. Leitura por Voz (Sintetizador de Voz)
+      btnOuvir.addEventListener('click', () => {
+        if ('speechSynthesis' in window) {
+          window.speechSynthesis.cancel(); // Para leituras anteriores
+
+          // Pega o texto do conteúdo ativo na tela
+          const abaAtiva = document.querySelector('.tab-pane.active');
+          const textoParaLer = abaAtiva ? abaAtiva.innerText : document.querySelector('main').innerText;
+
+          const locucao = new SpeechSynthesisUtterance(textoParaLer);
+          locucao.lang = 'pt-BR';
+
+          locucao.onstart = () => {
+            btnParar.classList.remove('d-none');
+          };
+
+          locucao.onend = () => {
+            btnParar.classList.add('d-none');
+          };
+
+          window.speechSynthesis.speak(locucao);
+        } else {
+          alert('Seu navegador não suporta a função de leitura por voz.');
+        }
+      });
+
+      // Botão Parar Leitura
+      btnParar.addEventListener('click', () => {
+        if ('speechSynthesis' in window) {
+          window.speechSynthesis.cancel();
+          btnParar.classList.add('d-none');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
