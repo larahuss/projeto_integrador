@@ -1,103 +1,47 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luz, Ciência e Acessibilidade - Projeto Integrador</title>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<article class="tab-pane fade" id="newton-pane" role="tabpanel" aria-labelledby="newton-tab">
+  <h3 class="h3 fw-bold mb-3 titulo-secao">Atividade 3 – Disco de Newton e Persistência Retiniana</h3>
   
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <section class="mb-4 destaque-card p-3 rounded-3">
+    <h4 class="h5 fw-bold subtitulo">Apresentação da Atividade</h4>
+    <p class="mb-3">Nesta simulação/experimento, analisamos o fenômeno físico da recomposição da luz branca utilizando o Disco de Newton, relacionando a velocidade de rotação com o efeito visual da persistência retiniana.</p>
 
-  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+    <h5 class="h6 fw-bold mt-4 mb-3 text-secondary">📸 Galeria de Fotos & Vídeo (Tópico 3)</h5>
 
-  <header class="p-3 shadow-sm sticky-top header-custom">
-    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
-      <h1 class="h4 mb-0 fw-bold header-title">✨ Acessibilidade Digital & Ciência</h1>
-     
-      <nav aria-label="Ferramentas de Acessibilidade">
-        <div class="d-flex flex-wrap gap-2">
-         
-          <div class="btn-group" role="group" aria-label="Ajuste de fonte">
-            <button type="button" id="btn-aumentar" class="btn btn-fonte" aria-label="Aumentar texto">A+</button>
-            <button type="button" id="btn-diminuir" class="btn btn-fonte" aria-label="Diminuir texto">A-</button>
-          </div>
-
-          <button type="button" id="btn-contraste" class="btn btn-contraste" aria-label="Ativar Alto Contraste">Alto Contraste 🌓</button>
-
-          <div class="btn-group" role="group" aria-label="Controle de Voz">
-            <button type="button" id="btn-ler-voz" class="btn btn-voz" aria-label="Ouvir texto da aba ativa">Ouvir Texto 🔊</button>
-            <button type="button" id="btn-parar-voz" class="btn btn-voz-parar d-none" aria-label="Parar leitura de voz">Parar ⏹️</button>
-          </div>
-
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <main id="conteudo-principal" class="container my-4">
-
-    <section class="mb-4 text-center hero-banner p-4 rounded-4 shadow">
-      <h2 class="display-6 fw-bold text-white">Pesquisas & Atividades Práticas</h2>
-      <p class="lead mb-0 text-white-50">Selecione uma aba para navegar pelas atividades do Projeto Integrador.</p>
-    </section>
-
-    <section class="mb-4 destaque-card p-4 rounded-4 shadow-sm">
-      <h3 class="h4 fw-bold subtitulo mb-3">Sobre o Projeto</h3>
-      <p>Este portal apresenta os resultados teóricos e práticos do nosso Projeto Integrador, onde investigamos a física da luz, a eletrônica applied (filtros PWM e LEDs RGB) e o fenômeno óptico do Disco de Newton. Nosso objetivo central é conectar a ciência básica ao desenvolvimento de tecnologias assistivas de alto impacto, promovendo inclusão e segurança para pessoas com baixa visão.</p>
+    <div class="row g-3 mb-4">
+      <div class="col-md-4 text-center">
+        <figure class="figure w-100 mb-0">
+          <img src="LINK_DA_FOTO_1_NEWTON_AQUI" alt="Disco de Newton parado com cores visíveis" class="img-fluid rounded shadow-sm figure-img">
+          <figcaption class="figure-caption">Figura 1: Disco de Newton em repouso com as cores do espectro.</figcaption>
+        </figure>
+      </div>
       
-      <div class="text-center my-3">
-        <img src="LINK_DA_SUA_FOTO_SOBRE_PROJETO_AQUI" alt="Imagem ilustrativa sobre o projeto integrador" class="img-fluid rounded shadow-sm">
+      <div class="col-md-4 text-center">
+        <figure class="figure w-100 mb-0">
+          <img src="LINK_DA_FOTO_2_NEWTON_AQUI" alt="Mecanismo de rotação ou simulação do disco" class="img-fluid rounded shadow-sm figure-img">
+          <figcaption class="figure-caption">Figura 2: Montagem do mecanismo de rotação do disco.</figcaption>
+        </figure>
       </div>
 
-      <hr class="my-4">
+      <div class="col-md-4 text-center">
+        <figure class="figure w-100 mb-0">
+          <img src="LINK_DA_FOTO_3_NEWTON_AQUI" alt="Disco de Newton em alta rotação" class="img-fluid rounded shadow-sm figure-img">
+          <figcaption class="figure-caption">Figura 3: Efeito visual da sobreposição das cores em rotação.</figcaption>
+        </figure>
+      </div>
+    </div>
 
-      <h4 class="h5 fw-bold text-danger mb-3">⚠️ Alerta contra Fake News Científicas</h4>
-      <p class="mb-2">A desinformação em tecnologia e saúde visual pode gerar riscos reais. Proteja-se seguindo estas diretrizes:</p>
-      <ul class="mb-0">
-        <li><strong>Evite receitas milagrosas:</strong> Terapias visuais com luzes RGB sem validação médica são perigosas.</li>
-        <li><strong>Cheque os dados de IA:</strong> Inteligências artificiais geram textos rápidos, mas precisam de revisão técnica e humana.</li>
-        <li><strong>Fontes Oficiais:</strong> Baseie seus projetos em normas técnicas da ABNT ou em artigos científicos revisados por pares.</li>
-      </ul>
-    </section>
-
-    <ul class="nav nav-pills mb-4 nav-justified gap-2" id="abasAtividades" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active rounded-3 shadow-sm" id="fade-tab" data-bs-toggle="tab" data-bs-target="#fade-pane" type="button" role="tab" aria-controls="fade-pane" aria-selected="true">💡 1. LED Fade (PWM)</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link rounded-3 shadow-sm" id="rgb-tab" data-bs-toggle="tab" data-bs-target="#rgb-pane" type="button" role="tab" aria-controls="rgb-pane" aria-selected="false">🌈 2. LED RGB e Cores</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link rounded-3 shadow-sm" id="newton-tab" data-bs-toggle="tab" data-bs-target="#newton-pane" type="button" role="tab" aria-controls="newton-pane" aria-selected="false">⚪ 3. Disco de Newton</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link rounded-3 shadow-sm" id="proposta-tab" data-bs-toggle="tab" data-bs-target="#proposta-pane" type="button" role="tab" aria-controls="proposta-pane" aria-selected="false">🚀 4. Nossa Proposta & IA</button>
-      </li>
-    </ul>
-
-    <div class="tab-content p-4 rounded-4 shadow-lg conteudo-box" id="conteudoAbas">
-
-      <article class="tab-pane fade show active" id="fade-pane" role="tabpanel" aria-labelledby="fade-tab">
-        <h3 class="h3 fw-bold mb-3 titulo-secao">Atividade 1 – Controle de Intensidade (LED Fade-In e Fade-Out)</h3>
-       
-        <section class="mb-4 destaque-card p-3 rounded-3">
-          <h4 class="h5 fw-bold subtitulo">Apresentação da Atividade</h4>
-          <p class="mb-3">O objetivo desta atividade foi compreender o controle da intensidade luminosa utilizando um LED no Tinkercad, correlacionando eletrônica com tecnologia assistiva. Montamos o circuito com Arduino Uno, protoboard, resistor de 220 Ω e um LED conectado a uma porta PWM. Na simulação, programamos o sinal para variar gradualmente de 0 a 255 (Fade-In) e de 255 a 0 (Fade-Out), obtendo uma transição suave de brilho sem oscilações bruscas.</p>
-          
-          <h5 class="h6 fw-bold mt-4 mb-3 text-secondary">📸 Galeria da Simulação & Vídeo de Funcionamento</h5>
-
-          <div class="row g-3 mb-4">
-            <div class="col-md-6 text-center">
-              <figure class="figure w-100 mb-0">
-                <img src="LINK_DA_FOTO_CIRCUITO_FADE_AQUI" alt="Esquema do circuito LED Fade no Tinkercad" class="img-fluid rounded shadow-sm figure-img">
-                <figcaption class="figure-caption">Figura 1: Montagem do circuito com Arduino, resistor e LED em pino PWM no Tinkercad.</figcaption>
-              </figure>
-            </div>
-            
-            <div class="col-md-6 text-center">
-              <figure class="figure w-100 mb-0">
-                <img src="LINK_DA_FOTO_CODIGO_FADE_AQUI" alt="Bloco ou código da programação do Fade" class="img-fluid rounded shadow-sm figure-img">
-                <figcaption class="figure-caption">Figura 2: Código C++ de controle de variância de brilho (0 a 255 e 255 a 0).</figcaption>
+    <div class="row mb-3">
+      <div class="col-12 text-center">
+        <figure class="figure w-100 mb-0">
+          <div class="ratio ratio-16x9 rounded shadow-sm overflow-hidden mb-2">
+            <video controls>
+              <source src="LINK_DO_VIDEO_NEWTON_AQUI.mp4" type="video/mp4">
+              Seu navegador não suporta a exibição de vídeos.
+            </video>
+          </div>
+          <figcaption class="figure-caption">Vídeo 3: Demonstração da rotação do Disco de Newton e recomposição da luz.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+</article>
